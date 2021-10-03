@@ -1041,7 +1041,6 @@ fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${Math.f
 })
   .then((res) => res.json())
   .then((data) => {
-    console.log(data);
     let image = data.primaryImageSmall;
     let name = data.objectName;
     let date = data.objectDate;
@@ -1057,7 +1056,7 @@ fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${Math.f
                 <h4 class="card-title">Metropolitan Museum of Art Collection API</h4>
                 <h5 class="card-text mt-4">${name}</h5>
                 <p>${artistName} (${date})</p>
-                <p>${medium}, ${size}</p>
+                <p>${medium},${size}</p>
                 <img src="${image}" />
                 <p>${creditLine}<p>
                 <br>
